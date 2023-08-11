@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import { Home } from './pages/Home'
 import { QuizRoot } from './components/QuizRoot'
 import { Quiz } from './pages/Quiz'
+import { Results } from "./pages/Results";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
                     },
                 ]
             },
+            {
+                path:'quiz/results',
+                element: <Results />
+            }
         ],
     },
 ]);

@@ -16,12 +16,11 @@ const Button = defineStyleConfig({
             _hover: { opacity: '90%' },
             _active: { opacity: '70%' }
         },
-        answer: {
-            w: '11.8125rem',
+        answerButton: {
+            minW: '11.8125rem',
             p: '0.875rem 2.5rem 0.875rem 1.25rem',
-            gap: '0.5rem',
             borderRadius: '0.5rem',
-            border: '1px solid #5BC1ED'
+            border: '1px solid #5BC1ED',
         },
         next: {
             w: '11.8125rem',
@@ -62,7 +61,8 @@ const Text = defineStyleConfig({
             fontFamily: 'Grange, sans-serif',
             fontSize: '2.5rem',
             fontWeight: '500',
-            lineHeight: '2.75rem'
+            lineHeight: '2.75rem',
+            w:'36.4375rem'
         },
         back: {
             color: '#677487',
@@ -74,6 +74,13 @@ const Text = defineStyleConfig({
             _active: { opacity: '70%' },
             cursor: 'pointer'
         },
+        answerText: {
+            color: '#1C2635',
+            fontFamily: 'proxima-nova, sans-serif',
+            fontWeight: '400',
+            minW: "8.0625rem",
+            textAlign:'left'
+        }
 
 
     }

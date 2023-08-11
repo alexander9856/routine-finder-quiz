@@ -9,8 +9,8 @@ export const Home = () => {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize='cover'
-            h='75vh'
             position="relative"
+            h='75vh'
         >
             <Overlay />
             <HomeText />
