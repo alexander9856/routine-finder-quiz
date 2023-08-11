@@ -1,5 +1,7 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import { Home } from './pages/Home'
+import { QuizRoot } from './components/QuizRoot'
+import { Quiz } from './pages/Quiz'
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -9,6 +11,16 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
+            },
+            {
+                path: 'quiz/:id',
+                element: <QuizRoot />,
+                children: [
+                    {
+                        index: true,
+                        element: <Quiz />,
+                    },
+                ]
             },
         ],
     },

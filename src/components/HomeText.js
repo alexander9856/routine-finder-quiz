@@ -1,4 +1,5 @@
-import { Flex, Text, Button } from '@chakra-ui/react'
+import { Flex, Text, Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom'
 export const HomeText = () => {
     return (
         <Flex
@@ -14,12 +15,12 @@ export const HomeText = () => {
             <Text variant='title'>
                 Build a self care routine<br /> suitable for you
             </Text>
-            
+
             <Text variant='subTitle'>
                 Take out test to get a personalised self care<br /> routine based on your needs.
             </Text>
 
-            <Button variant='start'>Start the quiz</Button>
+            <Button variant='start' as={Link} to='/quiz/1'>Start the quiz</Button>
         </Flex>
     )
 }
