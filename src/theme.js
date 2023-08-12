@@ -91,9 +91,31 @@ const Text = defineStyleConfig({
             fontWeight: '400',
             minW: "8.0625rem",
             textAlign: 'left'
+        },
+        cardTitle: {
+            color: '#1C2635',
+            fontFamily: 'Grange, sans-serif',
+            fontSize: '1.5rem',
+            fontWeight: '600',
+            lineHeight: '1.65rem',
+            textAlign: 'center'
+        },
+        cardSubtitle: {
+            color: '#1C2635',
+            fontFamily: 'proxima-nova, sans-serif',
+            fontWeight: '400',
+            lineHeight: '1.5rem',
+            mt: '1rem',
+        },
+        price: {
+            color: '#1C2635',
+            textAlign: 'center',
+            fontFamily: 'Grange, sans-serif',
+            fontSize: '1.125rem',
+            fontWeight: '500',
+            lineHeight: '1.2375rem',
+            mt:'0.7rem',
         }
-
-
     }
 })
 

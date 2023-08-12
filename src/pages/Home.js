@@ -4,7 +4,7 @@ import { HomeText } from '../components/HomeText'
 import { Background } from '../components/Background'
 export const Home = () => {
     return (
-        <Background image={HomeImg}>
+        <Background image={HomeImg} page='home'>
             <Overlay page='home' />
             <HomeText />
         </Background>

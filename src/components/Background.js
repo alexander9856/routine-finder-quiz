@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react"
 
-export const Background = ({ image, children }) => {
+export const Background = ({ image, page, children }) => {
     return (
         <Box
             backgroundImage={image}
@@ -8,7 +8,7 @@ export const Background = ({ image, children }) => {
             backgroundRepeat="no-repeat"
             backgroundSize='cover'
             position="relative"
-            h='75vh'
+            h={page === 'home' ? '100vh' : '75vh'}
         >
             {children}
         </Box>

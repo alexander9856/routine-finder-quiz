@@ -4,7 +4,7 @@ export const ResultsText = () => {
     return (
         <Flex
             position="absolute"
-            top="-20"
+            top="-15"
             left="0"
             right="0"
             bottom="0"
