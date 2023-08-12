@@ -1,6 +1,14 @@
-import { Box } from '@chakra-ui/react'
+import ResultsIMG from '../assets/ResultsIMG.png'
+import { Overlay } from '../components/Overlay'
+import { Background } from '../components/Background'
+import { ResultsText } from '../components/ResultsText'
 export const Results = () => {
     return (
-        <Box>Results page</Box>
+        <>
+            <Background image={ResultsIMG}>
+                <Overlay page='results' />
+                <ResultsText />
+            </Background>
+        </>
     )
 }

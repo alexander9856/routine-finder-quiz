@@ -29,6 +29,17 @@ const Button = defineStyleConfig({
             backgroundColor: '#C3EDFF',
             _hover: { opacity: '90%' },
             _active: { opacity: '70%' }
+        },
+        retake: {
+            width: '14.875rem',
+            padding: '0.875rem 2.5rem',
+            borderRadius: '0.5rem',
+            fontFamily: 'proxima-nova, sans-serif',
+            fontWeight: '500',
+            backgroundColor: 'transparent',
+            color: '#fff',
+            border: '1px solid #fff',
+            mt: '2rem'
         }
     }
 })
@@ -62,7 +73,7 @@ const Text = defineStyleConfig({
             fontSize: '2.5rem',
             fontWeight: '500',
             lineHeight: '2.75rem',
-            w:'36.4375rem'
+            w: '36.4375rem'
         },
         back: {
             color: '#677487',
@@ -79,7 +90,7 @@ const Text = defineStyleConfig({
             fontFamily: 'proxima-nova, sans-serif',
             fontWeight: '400',
             minW: "8.0625rem",
-            textAlign:'left'
+            textAlign: 'left'
         }
 
 

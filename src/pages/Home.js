@@ -1,19 +1,12 @@
-import { Box } from '@chakra-ui/react'
 import HomeImg from '../assets/HomeIMG.png'
 import { Overlay } from '../components/Overlay'
 import { HomeText } from '../components/HomeText'
+import { Background } from '../components/Background'
 export const Home = () => {
     return (
-        <Box
-            backgroundImage={HomeImg}
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-            backgroundSize='cover'
-            position="relative"
-            h='75vh'
-        >
-            <Overlay />
+        <Background image={HomeImg}>
+            <Overlay page='home' />
             <HomeText />
-        </Box >
+        </Background>
     )
 }
