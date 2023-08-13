@@ -16,7 +16,7 @@ export const ProductSlider = () => {
         setActiveSlideIndex(swiper.realIndex);
     };
     return (
-        <Box w='50%' position='relative'>
+        <Box maxW='50%' position='relative'>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={0}

@@ -3,7 +3,8 @@ import { Home } from './pages/Home'
 import { QuizRoot } from './components/QuizRoot'
 import { Quiz } from './pages/Quiz'
 import { Results } from "./pages/Results";
-import { Test } from './pages/Test'
+
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -28,10 +29,6 @@ export const router = createBrowserRouter([
                 path: 'quiz/results',
                 element: <Results />
             },
-            {
-                path: '/test',
-                element: <Test />
-            }
         ],
     },
 ]);

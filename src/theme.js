@@ -21,6 +21,11 @@ const Button = defineStyleConfig({
             p: '0.875rem 2.5rem 0.875rem 1.25rem',
             borderRadius: '0.5rem',
             border: '1px solid #5BC1ED',
+            display:'flex',
+            justifyContent:'flex-start',
+            whiteSpace:'unset',
+            height:'auto'
+            
         },
         next: {
             w: '11.8125rem',
@@ -70,10 +75,10 @@ const Text = defineStyleConfig({
             color: '#1C2635',
             textAlign: 'center',
             fontFamily: 'Grange, sans-serif',
-            fontSize: '2.5rem',
+            fontSize: ['1.5rem', '1.8rem', '2rem', '2.5rem'],
             fontWeight: '500',
             lineHeight: '2.75rem',
-            w: '36.4375rem'
+            w: ['100%', '100%', '36.4375rem', '36.4375rem']
         },
         back: {
             color: '#677487',
@@ -114,7 +119,7 @@ const Text = defineStyleConfig({
             fontSize: '1.125rem',
             fontWeight: '500',
             lineHeight: '1.2375rem',
-            mt:'0.7rem',
+            mt: '0.7rem',
         }
     }
 })

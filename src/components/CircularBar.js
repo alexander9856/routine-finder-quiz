@@ -1,13 +1,13 @@
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
-export const CircularBar = ({params}) => {
+export const CircularBar = ({ params }) => {
     return (
         <CircularProgress
             value={Number(params) * 20}
             trackColor='#EEF7FB'
             color="#AADDF3"
-            pos='absolute'
+            pos={['relative','relative','relative','absolute']}
             top='-5'
-            right='7rem'
+            right={['0', '0', '0', '7rem']}
             size='6.3125rem'
             thickness='4px'
         >
@@ -16,6 +16,7 @@ export const CircularBar = ({params}) => {
                 fontFamily='proxima-nova, sans-serif'
                 fontSize='1.25rem'
                 fontWeight='300'
+                position='absolute'
             >
                 {params + '/5'}
             </CircularProgressLabel>
