@@ -4,7 +4,6 @@ export const QuizContext = createContext();
 
 export const QuizProvider = ({ children }) => {
     const [answers, setAnswers] = useLocalStorage('answers', []);
-    console.log(answers)
 
     const contextValues = {
         answers,

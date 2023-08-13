@@ -15,14 +15,20 @@ export const useLocalStorage = (key, initValue) => {
 
 
     const setLocalStorageState = (value) => {
-        const copy = [...state];
-        const keyToUpdate = Object.keys(value)[0];
-        
-        const existingIndex = copy.findIndex((answer) => answer[keyToUpdate]);
-        existingIndex !== -1 ? copy[existingIndex] = value : copy.push(value);
+        if (value) {
+            const copy = [...state];
+            const keyToUpdate = Object.keys(value)[0];
 
-        setState(copy);
-        localStorage.setItem(key, JSON.stringify(copy));
+            const existingIndex = copy.findIndex((answer) => answer[keyToUpdate]);
+            existingIndex !== -1 ? copy[existingIndex] = value : copy.push(value);
+
+            setState(copy);
+            localStorage.setItem(key, JSON.stringify(copy));
+        }
+        else{
+            setState([])
+            localStorage.removeItem(key)
+        }
 
     }
 

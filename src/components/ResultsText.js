@@ -1,6 +1,9 @@
 import { Flex, Text, Button } from '@chakra-ui/react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { QuizContext } from '../contexts/QuizProvider'
 export const ResultsText = () => {
+    const { setAnswers } = useContext(QuizContext)
     return (
         <Flex
             position="absolute"
@@ -21,7 +24,7 @@ export const ResultsText = () => {
                 Perfect for if you're looking for soft, nourished skin, our moisturizing body washes are made with skin-natural nutrients that work with your skin to replenish moisture. With a light formula, the bubbly lather leaves your skin feeling cleansed and cared for. And by choosing relaxing fragrances you can add a moment of calm to the end of your day.
             </Text>
 
-            <Button variant='retake' as={Link} to='/quiz/1'>Retake the quiz</Button>
+            <Button variant='retake' as={Link} to='/quiz/1' onClick={() => setAnswers(null)}>Retake the quiz</Button>
         </Flex>
     )
 }

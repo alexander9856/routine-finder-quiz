@@ -25,7 +25,8 @@ const Button = defineStyleConfig({
             display: 'flex',
             justifyContent: 'flex-start',
             whiteSpace: 'unset',
-            height: 'auto'
+            height: 'auto',
+            _hover: {backgroundColor:'#e1f6ff'}
 
         },
         next: {

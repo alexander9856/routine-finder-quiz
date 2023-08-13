@@ -1,11 +1,14 @@
+import { useContext } from 'react'
+import { QuizContext } from '../contexts/QuizProvider'
 import { Flex, Button, Text, Image } from '@chakra-ui/react'
 import { useParams, Link } from 'react-router-dom'
 import arrow from '../assets/arrow.svg'
 export const QuizNavigation = () => {
     const params = Number(useParams().id);
-
-    const questionNumber = params - 1
-    const isAnswered = questionNumber in JSON.parse(localStorage.getItem('quizAnswers') || '{}');
+    const { answers } = useContext(QuizContext);
+    
+    const questionNumber = params - 1;
+    const isAnswered = answers[questionNumber];
     return (
         <Flex mt='2rem' align='center' gap='1.25rem'>
             <Text variant='back' as={Link} to={params === 1 ? '/' : `/quiz/${params - 1}`}>Back</Text>

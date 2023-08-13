@@ -1,4 +1,4 @@
-import { Flex, Text, Button, Stack } from '@chakra-ui/react';
+import { Flex, Text, SlideFade } from '@chakra-ui/react';
 import { questions } from '../questionsAndAnswers';
 import { useParams } from 'react-router-dom'
 import { CircularBar } from '../components/CircularBar';
@@ -8,17 +8,23 @@ export const Quiz = () => {
     const questionNumber = params - 1;
 
     return (
-        <Flex
-            direction='column'
-            justify='center'
-            align='center'
-            pos='relative'
-            w='100vw'
-            px='2rem'
+        <SlideFade
+            in={true}
+            offsetY="50px"
+            style={{ margin: "0px auto" }}
         >
-            <CircularBar params={params} />
-            <Text variant='questionTitle'>{questions[questionNumber].title}</Text>
-            <Answers questions={questions} questionNumber={questionNumber} />
-        </Flex >
+            <Flex
+                direction='column'
+                justify='center'
+                align='center'
+                pos='relative'
+                w='100vw'
+                px='2rem'
+            >
+                <CircularBar params={params} />
+                <Text variant='questionTitle'>{questions[questionNumber].title}</Text>
+                <Answers questions={questions} questionNumber={questionNumber} />
+            </Flex >
+        </SlideFade>
     )
 }
