@@ -16,13 +16,17 @@ export const ProductSlider = () => {
         setActiveSlideIndex(swiper.realIndex);
     };
     return (
-        <Box maxW='50%' position='relative'>
+        <Box maxW={['60%', '60%', '60%', '50%']} position='relative'>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={0}
-                slidesPerView={2}
+                className="mySwiper"
+                pagination={
+                    {
+                        clickable: true,
+                        bulletClass: `swiper-pagination-bullet`
+                    }
 
-                pagination={{ clickable: true }}
+                }
 
                 navigation={{
                     prevEl: '.custom-prev',
@@ -30,6 +34,21 @@ export const ProductSlider = () => {
                 }}
 
                 onSlideChange={handleSwiperSlideChange}
+
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                    480: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                }}
             >
                 <SwiperSlide >
                     <CardItem />
@@ -58,7 +77,7 @@ export const ProductSlider = () => {
                 display={activeSlideIndex > 0 ? 'flex' : 'none'}
                 alignItems='center'
                 justifyContent='center'
-
+                _hover={{ opacity: '75%' }}
                 position='absolute'
                 left='-35px'
                 mt='auto'
@@ -78,7 +97,7 @@ export const ProductSlider = () => {
                 alignItems='center'
                 justifyContent='center'
                 display={activeSlideIndex < 2 ? 'flex' : 'none'}
-
+                _hover={{ opacity: '75%' }}
                 position='absolute'
                 right='-70px'
                 mt='auto'

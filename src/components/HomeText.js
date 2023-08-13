@@ -1,4 +1,4 @@
-import { Flex, Text, Button } from '@chakra-ui/react';
+import { Flex, Text, Button, SlideFade } from '@chakra-ui/react';
 import { Link } from 'react-router-dom'
 export const HomeText = () => {
     return (
@@ -11,13 +11,14 @@ export const HomeText = () => {
             direction="column"
             justify="center"
             align="center"
+            px='2rem'
         >
-            <Text variant='title'>
-                Build a self care routine<br /> suitable for you
+            <Text variant='title' maxW='30.75rem'>
+                Build a self care routine suitable for you
             </Text>
 
-            <Text variant='subTitle'>
-                Take out test to get a personalised self care<br /> routine based on your needs.
+            <Text variant='subTitle' maxW='20.4375rem'>
+                Take out test to get a personalised self care routine based on your needs.
             </Text>
 
             <Button variant='start' as={Link} to='/quiz/1'>Start the quiz</Button>

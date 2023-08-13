@@ -13,19 +13,20 @@ const Button = defineStyleConfig({
             fontStyle: 'normal',
             fontWeight: '500',
             color: "#1C2635",
-            _hover: { opacity: '90%' },
-            _active: { opacity: '70%' }
+            _hover: { opacity: '90%', transform: 'scale(1.1)', fontWeight: '600' },
+            _active: { opacity: '70%' },
+
         },
         answerButton: {
             minW: '11.8125rem',
             p: '0.875rem 2.5rem 0.875rem 1.25rem',
             borderRadius: '0.5rem',
             border: '1px solid #5BC1ED',
-            display:'flex',
-            justifyContent:'flex-start',
-            whiteSpace:'unset',
-            height:'auto'
-            
+            display: 'flex',
+            justifyContent: 'flex-start',
+            whiteSpace: 'unset',
+            height: 'auto'
+
         },
         next: {
             w: '11.8125rem',
@@ -44,7 +45,9 @@ const Button = defineStyleConfig({
             backgroundColor: 'transparent',
             color: '#fff',
             border: '1px solid #fff',
-            mt: '2rem'
+            mt: '2rem',
+            _hover: { opacity: '90%', transform: 'scale(1.1)', fontWeight: '600' },
+
         }
     }
 })
