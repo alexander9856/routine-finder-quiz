@@ -4,7 +4,7 @@
   position: static !important;
   text-align: left !important;
   padding-left: 9.5rem;
-  margin-top: 2.3rem;
+  margin-top: 2.7rem;
 }
 
 .swiper-pagination-bullet {
@@ -33,30 +33,30 @@
 }
 
 
-@media only screen and (max-width: 640px) {
-  .css-vy92a0 {
-    width: 18rem !important;
-  }
-
-  .swiper-pagination {
-    position: static !important;
-    text-align: center !important;
-    padding-left: 0 !important;
-    margin-top: 2rem;
-  }
-
-  .swiper-slide img {
-    width: 100%;
-  }
-
-  .custom-prev,
-  .custom-next {
-    width: 3.75375rem !important;
-    height: 3.75375rem !important
+@media screen and (max-width: 1200px) {
+  .swiper-slide {
+    max-width: 300px !important;
   }
 
   .swiper-slide p {
-    font-size: 1.2rem !important;
+    font-size: 16px !important;
+  }
+
+  .swiper-container .swiper-pagination {
+    bottom: -30px !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .custom-next {
+    width: 2.75375rem !important;
+    height: 2.75375rem !important;
+    right: -40px !important;
+  }
+
+  .custom-prev {
+    width: 2.75375rem !important;
+    height: 2.75375rem !important;
   }
 
   .custom-prev,
@@ -65,10 +65,13 @@
     height: 3.75375rem !important;
     top: -80px !important;
   }
-
 }
 
-@media only screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
+  .swiper-slide p {
+    font-size: 0.8rem !important;
+  }
+
   .swiper-pagination {
     position: static !important;
     text-align: center !important;
@@ -87,45 +90,33 @@
     height: 3.75375rem !important;
     top: -80px !important;
   }
-
-  .swiper-slide p {
-    font-size: 1.2rem !important;
-  }
-
+  
 }
 
-@media only screen and (max-width: 1100px) {
-  .custom-next {
-    width: 2.75375rem !important;
-    height: 2.75375rem !important;
-    right: -40px !important;
+@media screen and (max-width: 640px) {
+  .css-vy92a0 {
+    width: 18rem !important;
   }
 
-  .custom-prev {
-    width: 2.75375rem !important;
-    height: 2.75375rem !important;
+  .swiper-pagination {
+    position: static !important;
+    text-align: center !important;
+    padding-left: 0 !important;
+    margin-top: 2rem;
+  }
+
+  .swiper-slide img {
+    width: 100%;
   }
 
   .custom-prev,
   .custom-next {
     width: 3.75375rem !important;
     height: 3.75375rem !important;
-    top:-80px !important;
-  }
-}
-
-
-@media only screen and (max-width: 1200px) {
-
-  .swiper-slide {
-    max-width: 300px !important;
+    top: -80px !important;
   }
 
   .swiper-slide p {
-    font-size: 16px !important;
-  }
-
-  .swiper-container .swiper-pagination {
-    bottom: -30px !important;
+    font-size: 0.75rem !important;
   }
 }

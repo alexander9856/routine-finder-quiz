@@ -2,14 +2,21 @@ import ResultsIMG from '../assets/ResultsIMG.png'
 import { Overlay } from '../components/Overlay'
 import { Background } from '../components/Background'
 import { ResultsText } from '../components/ResultsText'
-import { Stack, SlideFade } from '@chakra-ui/react'
+import { Stack, Text } from '@chakra-ui/react'
+import { useContext } from 'react'
+import { QuizContext } from '../contexts/QuizProvider'
 import { FirstCard } from '../components/FirstCard'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ProductSlider } from '../components/ProductSlider'
 import { useLoaderData, json } from 'react-router-dom'
+import { filterProducts } from '../filterProducts'
+import { useSortProducts } from '../hooks/useSortProducts';
 export const Results = () => {
     const products = useLoaderData();
+    const { userAnswers, userWishlist } = useContext(QuizContext);
+    const filteredData = filterProducts(products, userAnswers);
+    const sorted = useSortProducts(filteredData, userWishlist);
     return (
         <>
             <Background image={ResultsIMG} page='results'>
@@ -17,24 +24,30 @@ export const Results = () => {
                 <ResultsText />
             </Background>
 
+            {sorted.length > 0 ?
+                <Stack
+                    direction={['column', 'column', 'column', 'row']}
+                    spacing={10}
+                    justify={'center'}
+                    alignItems='center'
+                    w='100%'
+                    mb='5.75rem'
+                    mx='auto'
+                    mt={['-1rem', '-2.5rem', '-4remrem', '-4.5rem']}
+                    zIndex='999'
+                    pos='relative'
+                >
 
-            <Stack
-                direction={['column', 'column', 'column', 'row']}
-                spacing={10}
-                justify={'center'}
-                alignItems='center'
-                w='100%'
-                mb='5.75rem'
-                mx='auto'
-                mt={['-1rem', '-2.5rem', '-4remrem', '-4.5rem']}
-                zIndex='999'
-                pos='relative'
-            >
+                    <FirstCard />
 
-                <FirstCard />
+                    <ProductSlider products={sorted} />
+                </Stack >
+                :
+                <Text variant='noProducts'>
+                    No products found with the given criterias.
+                </Text>
+            }
 
-                <ProductSlider products={products} />
-            </Stack >
         </>
     )
 }

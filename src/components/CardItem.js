@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { QuizContext } from '../contexts/QuizProvider'
 import { Flex, Image, Text, Box, Tooltip, useToast } from "@chakra-ui/react"
-import shampoo from '../assets/shampoo.png';
 import filled from '../assets/filled.svg';
 import favorite from '../assets/favorite.svg';
 export const CardItem = ({ item }) => {
@@ -28,10 +27,28 @@ export const CardItem = ({ item }) => {
 
 
     return (
-        <Flex direction='column' maxW='21.785rem' h='26.25rem' pos='relative' backgroundColor='#fff' borderRadius='0.5rem'>
-            <Image style={{ width: '21.785rem', height: '21.5625rem' }} borderRadius='0.5rem' src={imgUrl} loading='lazy' />
+        <Flex
+            direction='column'
+            maxW='26.785rem'
+            maxH='26.25rem'
+            backgroundColor='#fff'
+            pos='relative'
+            borderRadius='0.5rem'
+            alignItems='center'
+        >
+            <Image
+                borderRadius='0.5rem'
+                h={['17rem', '18rem', '19rem', "21.5625rem"]}
+                w={['17rem', '18rem', '19rem', "21.875rem"]}
+                src={imgUrl}
+                _hover={{ transform: 'scale(1.01)' }}
+                transition='0.1s'
+                loading='lazy'
+                cursor='pointer'
+            />
             <Tooltip
                 hasArrow
+                arrowSize='5'
                 label="Add to wishlist"
                 bg='blackAlpha.700'
                 placement={'top'}
@@ -44,14 +61,20 @@ export const CardItem = ({ item }) => {
                     <Image src={isInWishlist ? filled : favorite} />
                 </Box>
             </Tooltip>
-            <Text variant='cardTitle' mt='0.75rem'>{title}</Text>
-            <Text
-                width='100%'
-                variant='price'
-                textAlign='center'
-                pos='absolute'
-                bottom='-20px'
-            >${price}</Text>
+            <Flex direction='column' mt='0.75rem' w='100%'>
+                <Text variant='cardTitle' whiteSpace={'nowrap'} overflow='hidden'>
+                    {title.length > 32 ? `${title.slice(0, 32).trim()}...` : title}
+                </Text>
+                <Text
+                    width='100%'
+                    variant='price'
+                    textAlign='center'
+                    pos='absolute'
+                    bottom='-25px'
+
+                >${price}</Text>
+            </Flex>
+
         </Flex>
     )
 }

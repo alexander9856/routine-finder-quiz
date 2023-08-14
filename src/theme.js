@@ -61,7 +61,7 @@ const Text = defineStyleConfig({
             color: '#fff',
             fontFamily: 'Grange, sans-serif',
             lineHeight: '2.75rem',
-            fontSize: ['2rem', '2rem', '2rem', '2.5rem'],
+            fontSize: ['2rem', '2rem', '2rem', '2.2rem'],
             fontWeight: '600',
             fontStyle: 'normal',
             textAlign: 'center'
@@ -104,7 +104,7 @@ const Text = defineStyleConfig({
         cardTitle: {
             color: '#1C2635',
             fontFamily: 'Grange, sans-serif',
-            fontSize: '1.1rem',
+            fontSize: '1rem',
             fontWeight: '600',
             lineHeight: '1.65rem',
             textAlign: 'center'
@@ -124,6 +124,12 @@ const Text = defineStyleConfig({
             fontWeight: '500',
             lineHeight: '1.2375rem',
             mt: '0.7rem',
+        },
+        noProducts:{
+            textAlign:'center',
+            mt:'2rem',
+            fontWeight:'700',
+            fontSize:'1.5rem'
         }
     }
 })
