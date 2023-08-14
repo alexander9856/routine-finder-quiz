@@ -8,6 +8,7 @@ export const Background = ({ image, page, children }) => {
             backgroundRepeat="no-repeat"
             backgroundSize='cover'
             position="relative"
+            w='100vw'
             h={page === 'home' ? '100vh' : '75vh'}
         >
             {children}

@@ -43,10 +43,6 @@ export const ProductSlider = ({ products }) => {
                         slidesPerView: 1,
                         spaceBetween: 10,
                     },
-                    480: {
-                        slidesPerView: 1.2,
-                        spaceBetween: 10,
-                    },
                     768: {
                         slidesPerView: 2,
                         spaceBetween: 10,
@@ -68,8 +64,7 @@ export const ProductSlider = ({ products }) => {
 
             </Swiper >
 
-            <Box
-                className='custom-prev'
+            <Box className='custom-prev'
                 w='3.75375rem'
                 h='3.75375rem'
                 borderRadius='1.87688rem'
@@ -106,8 +101,6 @@ export const ProductSlider = ({ products }) => {
             >
                 <ChevronRightIcon boxSize='7' />
             </Box>
-
         </Box >
-
     )
 }

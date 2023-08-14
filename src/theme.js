@@ -26,7 +26,7 @@ const Button = defineStyleConfig({
             justifyContent: 'flex-start',
             whiteSpace: 'unset',
             height: 'auto',
-            _hover: {backgroundColor:'#e1f6ff'}
+            _hover: { backgroundColor: '#e1f6ff' }
 
         },
         next: {
@@ -61,7 +61,7 @@ const Text = defineStyleConfig({
             color: '#fff',
             fontFamily: 'Grange, sans-serif',
             lineHeight: '2.75rem',
-            fontSize: '2.5rem',
+            fontSize: ['2rem', '2rem', '2rem', '2.5rem'],
             fontWeight: '600',
             fontStyle: 'normal',
             textAlign: 'center'

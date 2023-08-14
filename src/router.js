@@ -3,13 +3,14 @@ import { Home } from './pages/Home'
 import { QuizRoot } from './components/QuizRoot'
 import { Quiz } from './pages/Quiz'
 import { Results, loader } from "./pages/Results";
+import {Error404} from "./pages/Error404";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Outlet />,
-        // errorElement: 
+        errorElement: <Error404 />,
         children: [
             {
                 index: true,
