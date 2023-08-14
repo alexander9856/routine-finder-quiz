@@ -2,15 +2,14 @@ import ResultsIMG from '../assets/ResultsIMG.png'
 import { Overlay } from '../components/Overlay'
 import { Background } from '../components/Background'
 import { ResultsText } from '../components/ResultsText'
-import { Stack, SlideFade, Box } from '@chakra-ui/react'
+import { Stack, SlideFade } from '@chakra-ui/react'
 import { FirstCard } from '../components/FirstCard'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ProductSlider } from '../components/ProductSlider'
 import { useLoaderData, json } from 'react-router-dom'
 export const Results = () => {
-    const data = useLoaderData();
-    console.log(data)
+    const products = useLoaderData();
     return (
         <>
             <Background image={ResultsIMG} page='results'>
@@ -36,7 +35,7 @@ export const Results = () => {
                     pos='relative'
                 >
                     <FirstCard />
-                    <ProductSlider />
+                    <ProductSlider products={products} />
                 </Stack>
             </SlideFade>
         </>

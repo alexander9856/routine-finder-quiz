@@ -2,8 +2,11 @@ import { Flex, Image, Text, Box, Tooltip, useToast } from "@chakra-ui/react"
 import shampoo from '../assets/shampoo.png';
 import filled from '../assets/filled.svg';
 import favorite from '../assets/favorite.svg';
-export const CardItem = () => {
-    const toast = useToast()
+export const CardItem = ({ item }) => {
+    const { variants, images, title } = item
+    const price = variants[0].price;
+    const imgUrl = images[0].src
+    const toast = useToast();
     const addToWishlist = () => {
         toast({
             title: 'Product added to Wishlist',
@@ -13,11 +16,10 @@ export const CardItem = () => {
             position: 'top',
             containerStyle: { borderRadius: '0', fontSize: "13px", fontFamily: 'proxima-nova, sans-serif' },
         })
-
     }
     return (
-        <Flex direction='column' maxW='21.785rem' pos='relative'>
-            <Image src={shampoo} h='21.5625rem' />
+        <Flex direction='column' maxW='21.785rem' pos='relative' backgroundColor='#fff' borderRadius='0.5rem'>
+            <Image src={imgUrl} h='21.5625rem' />
             <Tooltip
                 hasArrow
                 label="Add to wishlist"
@@ -34,8 +36,8 @@ export const CardItem = () => {
             </Tooltip>
 
 
-            <Text variant='cardTitle' mt='0.75rem'>Milk Body Cleanser</Text>
-            <Text variant='price'>$14.00</Text>
+            <Text variant='cardTitle' mt='0.75rem'>{title}</Text>
+            <Text variant='price'>${price}</Text>
         </Flex>
     )
 }

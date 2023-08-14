@@ -1,3 +1,5 @@
+import { useState, useContext } from 'react';
+import { QuizContext } from '../contexts/QuizProvider'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,13 +10,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Box } from '@chakra-ui/react'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
-import { useState } from 'react'
-export const ProductSlider = () => {
+import { filterProducts } from '../filterProducts'
+export const ProductSlider = ({ products }) => {
+    const { userAnswers } = useContext(QuizContext)
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-
-    const handleSwiperSlideChange = (swiper) => {
-        setActiveSlideIndex(swiper.realIndex);
-    };
+    const filteredData = filterProducts(products, userAnswers)
     return (
         <Box maxW={['60%', '60%', '60%', '50%']} position='relative'>
             <Swiper
@@ -33,7 +33,7 @@ export const ProductSlider = () => {
                     nextEl: '.custom-next'
                 }}
 
-                onSlideChange={handleSwiperSlideChange}
+                onSlideChange={(swiper) => setActiveSlideIndex(swiper.realIndex)}
 
                 breakpoints={{
                     0: {
@@ -50,22 +50,12 @@ export const ProductSlider = () => {
                     },
                 }}
             >
-                <SwiperSlide >
-                    <CardItem />
-                </SwiperSlide>
+                {filteredData.map((x, index) => (
+                    <SwiperSlide key={index} >
+                        <CardItem item={x} />
+                    </SwiperSlide>
+                ))}
 
-                <SwiperSlide >
-                    <CardItem />
-                </SwiperSlide>
-
-                <SwiperSlide >
-                    <CardItem />
-                </SwiperSlide>
-
-
-                <SwiperSlide >
-                    <CardItem />
-                </SwiperSlide>
             </Swiper >
 
             <Box
@@ -96,7 +86,7 @@ export const ProductSlider = () => {
                 backgroundColor='#EEF7FB'
                 alignItems='center'
                 justifyContent='center'
-                display={activeSlideIndex < 2 ? 'flex' : 'none'}
+                display={activeSlideIndex <= filteredData.length - 3 ? 'flex' : 'none'}
                 _hover={{ opacity: '75%' }}
                 position='absolute'
                 right='-70px'

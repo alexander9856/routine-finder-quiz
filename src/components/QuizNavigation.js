@@ -5,10 +5,10 @@ import { useParams, Link } from 'react-router-dom'
 import arrow from '../assets/arrow.svg'
 export const QuizNavigation = () => {
     const params = Number(useParams().id);
-    const { answers } = useContext(QuizContext);
+    const { userAnswers } = useContext(QuizContext);
 
     const questionNumber = params - 1;
-    const isAnswered = answers[questionNumber];
+    const isAnswered = userAnswers[questionNumber];
     return (
         <Flex mt='2rem' align='center' gap='1.25rem'>
             <Text variant='back' as={Link} to={params === 1 ? '/' : `/quiz/${params - 1}`}>Back</Text>

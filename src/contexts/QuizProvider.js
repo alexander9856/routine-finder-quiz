@@ -3,11 +3,11 @@ import { useLocalStorage } from '../hooks/useLocalStorage'
 export const QuizContext = createContext();
 
 export const QuizProvider = ({ children }) => {
-    const [answers, setAnswers] = useLocalStorage('answers', []);
+    const [userAnswers, setUserAnswers] = useLocalStorage('answers', []);
 
     const contextValues = {
-        answers,
-        setAnswers,
+        userAnswers,
+        setUserAnswers,
     };
 
     return (
