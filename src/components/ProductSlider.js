@@ -11,10 +11,13 @@ import 'swiper/css/scrollbar';
 import { Box } from '@chakra-ui/react'
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
 import { filterProducts } from '../filterProducts'
+import { useSortProducts } from '../hooks/useSortProducts';
 export const ProductSlider = ({ products }) => {
-    const { userAnswers } = useContext(QuizContext)
+    const { userAnswers, userWishlist } = useContext(QuizContext)
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-    const filteredData = filterProducts(products, userAnswers)
+
+    const filteredData = filterProducts(products, userAnswers);
+    const sorted = useSortProducts(filteredData, userWishlist);
     return (
         <Box maxW={['60%', '60%', '60%', '50%']} position='relative'>
             <Swiper
@@ -50,11 +53,18 @@ export const ProductSlider = ({ products }) => {
                     },
                 }}
             >
-                {filteredData.map((x, index) => (
+                {sorted.length > 0 ? sorted.map((x, index) => (
                     <SwiperSlide key={index} >
                         <CardItem item={x} />
                     </SwiperSlide>
-                ))}
+                )) :
+                    filteredData.map((x, index) => (
+                        <SwiperSlide key={index} >
+                            <CardItem item={x} />
+                        </SwiperSlide>
+                    ))
+                }
+
 
             </Swiper >
 

@@ -29,7 +29,7 @@ export const CardItem = ({ item }) => {
 
     return (
         <Flex direction='column' maxW='21.785rem' h='26.25rem' pos='relative' backgroundColor='#fff' borderRadius='0.5rem'>
-            <Image style={{ width: '21.785rem', height: '21.5625rem' }} borderRadius='0.5rem' src={imgUrl} />
+            <Image style={{ width: '21.785rem', height: '21.5625rem' }} borderRadius='0.5rem' src={imgUrl} loading='lazy' />
             <Tooltip
                 hasArrow
                 label="Add to wishlist"

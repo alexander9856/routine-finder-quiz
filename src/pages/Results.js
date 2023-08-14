@@ -17,27 +17,24 @@ export const Results = () => {
                 <ResultsText />
             </Background>
 
-            <SlideFade
-                in={true}
-                offsetY="50px"
-                style={{ margin: "0px auto" }}
+
+            <Stack
+                direction={['column', 'column', 'column', 'row']}
+                spacing={10}
+                justify={'center'}
+                alignItems='center'
+                w='100%'
+                mb='5.75rem'
+                mx='auto'
+                mt={['-1rem', '-2.5rem', '-4remrem', '-4.5rem']}
+                zIndex='999'
+                pos='relative'
             >
-                <Stack
-                    direction={['column', 'column', 'column', 'row']}
-                    spacing={10}
-                    justify={'center'}
-                    alignItems='center'
-                    w='100%'
-                    mb='5.75rem'
-                    mx='auto'
-                    mt={['-1rem', '-2.5rem', '-4remrem', '-4.5rem']}
-                    zIndex='999'
-                    pos='relative'
-                >
-                    <FirstCard />
-                    <ProductSlider products={products} />
-                </Stack>
-            </SlideFade>
+
+                <FirstCard />
+
+                <ProductSlider products={products} />
+            </Stack >
         </>
     )
 }
