@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export const useLocalStorage = (key, initValue) => {
-    const [state, setState] = useState(() => {
+export const useLocalStorageAnswers = (key, initValue) => {
+    const [userAnswers, setUserAnswers] = useState(() => {
         const isAnswers = localStorage.getItem(key);
         if (isAnswers) {
             const answers = JSON.parse(isAnswers);
@@ -14,23 +14,23 @@ export const useLocalStorage = (key, initValue) => {
     });
 
 
-    const setLocalStorageState = (value) => {
+    const setLocalStorageAnswers = (value) => {
         if (value) {
-            const copy = [...state];
+            const copy = [...userAnswers];
             const keyToUpdate = Object.keys(value)[0];
 
             const existingIndex = copy.findIndex((answer) => answer[keyToUpdate]);
             existingIndex !== -1 ? copy[existingIndex] = value : copy.push(value);
 
-            setState(copy);
+            setUserAnswers(copy);
             localStorage.setItem(key, JSON.stringify(copy));
         }
         else{
-            setState([])
+            setUserAnswers([])
             localStorage.removeItem(key)
         }
 
     }
 
-    return [state, setLocalStorageState]
+    return [userAnswers, setLocalStorageAnswers]
 }

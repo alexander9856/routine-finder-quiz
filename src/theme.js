@@ -104,7 +104,7 @@ const Text = defineStyleConfig({
         cardTitle: {
             color: '#1C2635',
             fontFamily: 'Grange, sans-serif',
-            fontSize: '1.5rem',
+            fontSize: '1.2rem',
             fontWeight: '600',
             lineHeight: '1.65rem',
             textAlign: 'center'

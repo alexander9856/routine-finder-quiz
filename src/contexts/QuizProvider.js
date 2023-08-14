@@ -1,13 +1,18 @@
 import { createContext, useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage'
+import { useLocalStorageAnswers } from '../hooks/useLocalStorageAnswers'
+import { useLocalStorageWishlist } from '../hooks/useLocalStorageWishlist';
+
 export const QuizContext = createContext();
 
 export const QuizProvider = ({ children }) => {
-    const [userAnswers, setUserAnswers] = useLocalStorage('answers', []);
+    const [userAnswers, setUserAnswers] = useLocalStorageAnswers('userAnswers', []);
+    const [userWishlist, setUserWishlist] = useLocalStorageWishlist('userWishlist', []);
 
     const contextValues = {
         userAnswers,
         setUserAnswers,
+        userWishlist,
+        setUserWishlist
     };
 
     return (

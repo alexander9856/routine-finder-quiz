@@ -70,11 +70,10 @@ export const ProductSlider = ({ products }) => {
                 _hover={{ opacity: '75%' }}
                 position='absolute'
                 left='-35px'
-                mt='auto'
+                my='auto'
                 zIndex='999'
                 top='0'
                 bottom='0'
-                mb='auto'
             >
                 <ChevronLeftIcon boxSize='7' />
             </Box>
@@ -90,11 +89,10 @@ export const ProductSlider = ({ products }) => {
                 _hover={{ opacity: '75%' }}
                 position='absolute'
                 right='-70px'
-                mt='auto'
+                my='auto'
                 zIndex='9999'
                 top='0'
                 bottom='0'
-                mb='auto'
             >
                 <ChevronRightIcon boxSize='7' />
             </Box>
