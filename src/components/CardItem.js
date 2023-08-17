@@ -43,7 +43,7 @@ export const CardItem = ({ item }) => {
                 src={imgUrl}
                 _hover={{ transform: 'scale(1.01)' }}
                 transition='0.1s'
-                loading='lazy'
+                // loading='lazy'
                 cursor='pointer'
             />
             <Tooltip
