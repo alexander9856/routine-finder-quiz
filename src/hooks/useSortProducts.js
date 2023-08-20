@@ -9,11 +9,14 @@ export const useSortProducts = (filteredData, userWishlist) => {
                 const bIndex = userWishlist.indexOf(b.title);
                 if (aIndex !== -1 && bIndex !== -1) {
                     return aIndex - bIndex;
-                } else if (aIndex !== -1) {
+                }
+                 else if (aIndex !== -1) {
                     return -1;
-                } else if (bIndex !== -1) {
+                } 
+                else if (bIndex !== -1) {
                     return 1;
-                } else {
+                }
+                 else {
                     return 0;
                 }
             }

@@ -13,11 +13,11 @@ export const HomeText = () => {
             align="center"
             px='2rem'
         >
-            <Text variant='title' maxW='30.75rem'>
+            <Text variant='title' >
                 Build a self care routine suitable for you
             </Text>
 
-            <Text variant='subTitle' maxW='20.4375rem'>
+            <Text variant='subTitle' >
                 Take out test to get a personalised self care routine based on your needs.
             </Text>
 

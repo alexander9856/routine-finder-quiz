@@ -8,7 +8,7 @@ const Button = defineStyleConfig({
             backgroundColor: '#C3EDFF',
             borderRadius: '0.5rem',
             p: '0.875rem 2.5rem',
-            fontFamily: 'proxima-nova, sans-serif',
+            fontFamily: 'Proxima-Nova, sans-serif',
             fontSize: '1rem',
             fontStyle: 'normal',
             fontWeight: '500',
@@ -59,29 +59,33 @@ const Text = defineStyleConfig({
     variants: {
         title: {
             color: '#fff',
-            fontFamily: 'Grange, sans-serif',
-            lineHeight: '2.75rem',
-            fontSize: ['2rem', '2rem', '2rem', '2.2rem'],
-            fontWeight: '600',
+            fontFamily: 'Spectral, sans-serif',
+            lineHeight: ['2.8rem','3.75rem'],
+            fontSize: ['2.5rem', '2.5rem', '2.8rem', '3.2rem'],
+            fontWeight: '500',
             fontStyle: 'normal',
-            textAlign: 'center'
+            textAlign: 'center',
+            maxW: '45.75rem'
         },
         subTitle: {
             color: '#fff',
             textAlign: 'center',
-            fontFamily: 'proxima-nova, sans-serif',
+            fontFamily: 'Proxima-Nova, sans-serif',
             fontStyle: 'normal',
             fontWeight: '400',
             lineHeight: 'normal',
-            mt: '16px'
+            mt: '16px',
+            letterSpacing: '1px',
+            fontSize: ['0.9rem','1.1rem'],
+            maxW: '24.9375rem'
         },
         questionTitle: {
             color: '#1C2635',
             textAlign: 'center',
-            fontFamily: 'Grange, sans-serif',
+            fontFamily: 'Spectral, sans-serif',
             fontSize: ['1.5rem', '1.8rem', '2rem', '2.5rem'],
             fontWeight: '500',
-            lineHeight: '2.75rem',
+            lineHeight: ['1.75rem','1.75rem','2.75rem'],
             w: ['100%', '100%', '36.4375rem', '36.4375rem']
         },
         back: {
@@ -103,11 +107,13 @@ const Text = defineStyleConfig({
         },
         cardTitle: {
             color: '#1C2635',
-            fontFamily: 'Grange, sans-serif',
-            fontSize: '1rem',
+            fontFamily: 'Spectral, sans-serif',
+            fontSize: '1.5rem',
             fontWeight: '600',
             lineHeight: '1.65rem',
-            textAlign: 'center'
+            textAlign: 'center',
+
+
         },
         cardSubtitle: {
             color: '#1C2635',
@@ -119,17 +125,24 @@ const Text = defineStyleConfig({
         price: {
             color: '#1C2635',
             textAlign: 'center',
-            fontFamily: 'Grange, sans-serif',
-            fontSize: '1.125rem',
+            fontFamily: 'Spectral, sans-serif',
+            fontSize: ['1.125rem', '0.95rem', '0.95rem', '1rem', '1.125rem'],
             fontWeight: '500',
             lineHeight: '1.2375rem',
-            mt: '0.7rem',
+            mt: '0.5rem',
+            // pos: 'absolute',
+            // bottom: '-25px',
+            width: '100%',
+            textAlign: 'center',
         },
-        noProducts:{
-            textAlign:'center',
-            mt:'2rem',
-            fontWeight:'700',
-            fontSize:'1.5rem'
+        noProducts: {
+            textAlign: 'center',
+            mt: '2rem',
+            mx:'auto',
+            fontFamily: 'Spectral, sans-serif',
+            fontWeight: '700',
+            fontSize: ['1.3rem','1.3rem','1.5rem'],
+            maxW:'80%'
         }
     }
 })

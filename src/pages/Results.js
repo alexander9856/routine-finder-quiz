@@ -44,7 +44,7 @@ export const Results = () => {
                 </Stack >
                 :
                 <Text variant='noProducts'>
-                    No products found with the given criterias.
+                    There are no suitable products found for you :(
                 </Text>
             }
 
