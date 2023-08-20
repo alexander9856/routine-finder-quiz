@@ -107,8 +107,8 @@ const Text = defineStyleConfig({
         },
         cardTitle: {
             color: '#1C2635',
-            fontFamily: 'Grange, sans-serif',
-            fontSize: '1rem',
+            fontFamily: 'Spectral, sans-serif',
+            fontSize: '1.5rem',
             fontWeight: '600',
             lineHeight: '1.65rem',
             textAlign: 'center',
@@ -125,21 +125,24 @@ const Text = defineStyleConfig({
         price: {
             color: '#1C2635',
             textAlign: 'center',
-            fontFamily: 'Grange, sans-serif',
-            fontSize: ['1.125rem', '0.9rem', '0.9rem', '0.9rem', '1.125rem'],
+            fontFamily: 'Spectral, sans-serif',
+            fontSize: ['1.125rem', '0.95rem', '0.95rem', '1rem', '1.125rem'],
             fontWeight: '500',
             lineHeight: '1.2375rem',
             mt: '0.7rem',
-            pos: 'absolute',
-            bottom: '-25px',
+            // pos: 'absolute',
+            // bottom: '-25px',
             width: '100%',
             textAlign: 'center',
         },
         noProducts: {
             textAlign: 'center',
             mt: '2rem',
+            mx:'auto',
+            fontFamily: 'Spectral, sans-serif',
             fontWeight: '700',
-            fontSize: '1.5rem'
+            fontSize: ['1.3rem','1.3rem','1.5rem'],
+            maxW:'80%'
         }
     }
 })

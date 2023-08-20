@@ -8,12 +8,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Box } from '@chakra-ui/react'
-import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
+import { LeftArrow, RightArrow } from './SliderArrows';
 
 export const ProductSlider = ({ products }) => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     return (
-        <Box maxW={['60%', '82%', '65%', '50%']} position='relative'>
+        <Box
+            maxW={['60%', '82%', '65%', '50%']}
+            position='relative'
+            mb={products.length <= 2 && '3.5rem'}
+        >
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 className="mySwiper"
@@ -37,7 +41,7 @@ export const ProductSlider = ({ products }) => {
                     },
                     480: {
                         slidesPerView: products.length == 1 ? 1 : 2,
-                        spaceBetween: 20,
+                        spaceBetween: products.length == 1 ? 0 : 20,
                     },
                 }}
             >
@@ -50,44 +54,8 @@ export const ProductSlider = ({ products }) => {
 
 
             </Swiper >
-
-            <Box className='custom-prev'
-                w='3.75375rem'
-                h='3.75375rem'
-                borderRadius='1.87688rem'
-                backgroundColor='#EEF7FB'
-                display={activeSlideIndex > 0 ? 'flex' : 'none'}
-                alignItems='center'
-                justifyContent='center'
-                _hover={{ opacity: '75%' }}
-                position='absolute'
-                left='-35px'
-                my='auto'
-                zIndex='999'
-                top='0'
-                bottom='0'
-            >
-                <ChevronLeftIcon boxSize='7' />
-            </Box>
-
-            <Box className='custom-next'
-                w='3.75375rem'
-                h='3.75375rem'
-                borderRadius='1.87688rem'
-                backgroundColor='#EEF7FB'
-                alignItems='center'
-                justifyContent='center'
-                display={[activeSlideIndex <= products.length - 2 ? 'flex' : 'none', activeSlideIndex <= products.length - 3 ? 'flex' : 'none']}
-                _hover={{ opacity: '75%' }}
-                position='absolute'
-                right='-70px'
-                my='auto'
-                zIndex='9999'
-                top='0'
-                bottom='0'
-            >
-                <ChevronRightIcon boxSize='7' />
-            </Box>
+            <LeftArrow activeSlideIndex={activeSlideIndex} />
+            <RightArrow activeSlideIndex={activeSlideIndex} products={products} />
         </Box >
     )
 }
