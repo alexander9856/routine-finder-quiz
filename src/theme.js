@@ -8,7 +8,7 @@ const Button = defineStyleConfig({
             backgroundColor: '#C3EDFF',
             borderRadius: '0.5rem',
             p: '0.875rem 2.5rem',
-            fontFamily: 'proxima-nova, sans-serif',
+            fontFamily: 'Proxima-Nova, sans-serif',
             fontSize: '1rem',
             fontStyle: 'normal',
             fontWeight: '500',
@@ -82,10 +82,10 @@ const Text = defineStyleConfig({
         questionTitle: {
             color: '#1C2635',
             textAlign: 'center',
-            fontFamily: 'Grange, sans-serif',
+            fontFamily: 'Spectral, sans-serif',
             fontSize: ['1.5rem', '1.8rem', '2rem', '2.5rem'],
             fontWeight: '500',
-            lineHeight: '2.75rem',
+            lineHeight: ['1.75rem','1.75rem','2.75rem'],
             w: ['100%', '100%', '36.4375rem', '36.4375rem']
         },
         back: {

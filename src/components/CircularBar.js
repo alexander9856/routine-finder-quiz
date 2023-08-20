@@ -7,8 +7,8 @@ export const CircularBar = ({ params }) => {
             color="#AADDF3"
             pos={['relative','relative','relative','absolute']}
             top='-5'
-            right={['0', '0', '0', '7rem']}
-            size='6.3125rem'
+            right={['0', '0', '0', '4rem','7rem']}
+            size={['5.3125rem','5.3125rem','6.3125rem']}
             thickness='4px'
         >
             <CircularProgressLabel
