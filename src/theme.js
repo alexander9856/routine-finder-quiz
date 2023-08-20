@@ -60,11 +60,12 @@ const Text = defineStyleConfig({
         title: {
             color: '#fff',
             fontFamily: 'Spectral, sans-serif',
-            lineHeight: '3.75rem',
-            fontSize: ['3rem', '3rem', '3rem', '3.2rem'],
+            lineHeight: ['2.8rem','3.75rem'],
+            fontSize: ['2rem', '2.5rem', '2.8rem', '3.2rem'],
             fontWeight: '500',
             fontStyle: 'normal',
-            textAlign: 'center'
+            textAlign: 'center',
+            maxW: '45.75rem'
         },
         subTitle: {
             color: '#fff',
@@ -74,8 +75,9 @@ const Text = defineStyleConfig({
             fontWeight: '400',
             lineHeight: 'normal',
             mt: '16px',
-            letterSpacing:'1px',
-            fontSize: '1.1rem'
+            letterSpacing: '1px',
+            fontSize: ['0.9rem','1.1rem'],
+            maxW: '24.9375rem'
         },
         questionTitle: {
             color: '#1C2635',
@@ -110,7 +112,7 @@ const Text = defineStyleConfig({
             fontWeight: '600',
             lineHeight: '1.65rem',
             textAlign: 'center',
-           
+
 
         },
         cardSubtitle: {
