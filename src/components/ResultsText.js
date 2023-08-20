@@ -11,7 +11,7 @@ export const ResultsText = () => {
     return (
         <Flex
             position="absolute"
-            top="-15"
+            top="-10"
             left="0"
             right="0"
             bottom="0"
@@ -20,11 +20,11 @@ export const ResultsText = () => {
             align="center"
             px="1rem"
         >
-            <Text variant='title' maxW="36.4375rem">
+            <Text variant='title' maxW="36.4375rem" lineHeight='3rem'>
                 Build your everyday self care routine.
             </Text>
 
-            <Text variant='subTitle' lineHeight='1.5rem' mt='2rem' maxW='35.1875rem'>
+            <Text variant='subTitle' lineHeight='1.5rem' mt='2rem' maxW='37.1875rem'  fontSize='1rem'>
                 Perfect for if you're looking for soft, nourished skin, our moisturizing body washes are made with skin-natural nutrients that work with your skin to replenish moisture. With a light formula, the bubbly lather leaves your skin feeling cleansed and cared for. And by choosing relaxing fragrances you can add a moment of calm to the end of your day.
             </Text>
 

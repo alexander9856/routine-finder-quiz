@@ -58,17 +58,29 @@ export const CardItem = ({ item }) => {
                 fontSize={'0.8em'}
             >
                 <Box pos='absolute' right='1rem' top='1.06rem' cursor='pointer' onClick={() => updateWishList(title)}>
-                    <Image src={isInWishlist ? filled : favorite} boxSize={['1.25rem','1rem','1.25rem','1.25rem','1.5rem']} />
+                    <Image src={isInWishlist ? filled : favorite} boxSize={['1.25rem', '1rem', '1.25rem', '1.25rem', '1.5rem']} />
                 </Box>
             </Tooltip>
             <Flex direction='column' mt='0.75rem' w='100%'>
-                <Text
-                    whiteSpace={['normal', 'nowrap']}
-                    overflow='hidden'
-                    variant='cardTitle'
-                    fontSize={['1rem', '0.9rem', '0.9rem', '0.95rem', '1rem']}
-                > {title}
-                </Text>
+                <Tooltip
+                    hasArrow
+                    arrowSize='5'
+                    label="Add to wishlist"
+                    bg='blackAlpha.700'
+                    placement={'top'}
+                    color={'#fff'}
+                    fontFamily='proxima-nova, sans-serif'
+                    letterSpacing='1px'
+                    fontSize={'0.8em'}
+                >
+                    <Text
+                        whiteSpace='nowrap'
+                        overflow='hidden'
+                        variant='cardTitle'
+                        fontSize={['1rem', '0.9rem', '0.9rem', '0.95rem', '1rem']}
+                    > {title}
+                    </Text>
+                </Tooltip>
                 <Text variant='price'>${price}</Text>
             </Flex>
 

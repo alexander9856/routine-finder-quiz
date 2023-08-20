@@ -61,7 +61,7 @@ const Text = defineStyleConfig({
             color: '#fff',
             fontFamily: 'Spectral, sans-serif',
             lineHeight: ['2.8rem','3.75rem'],
-            fontSize: ['2rem', '2.5rem', '2.8rem', '3.2rem'],
+            fontSize: ['2.5rem', '2.5rem', '2.8rem', '3.2rem'],
             fontWeight: '500',
             fontStyle: 'normal',
             textAlign: 'center',

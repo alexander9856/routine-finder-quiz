@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 export const useSortProducts = (filteredData, userWishlist) => {
     const [sortedProducts, setSortedProducts] = useState([]);
-
+    
     useEffect(() => {
         const sorted = filteredData.sort((a, b) => {
             if (userWishlist) {
@@ -10,13 +10,13 @@ export const useSortProducts = (filteredData, userWishlist) => {
                 if (aIndex !== -1 && bIndex !== -1) {
                     return aIndex - bIndex;
                 }
-                else if (aIndex !== -1) {
+                 else if (aIndex !== -1) {
                     return -1;
-                }
+                } 
                 else if (bIndex !== -1) {
                     return 1;
                 }
-                else {
+                 else {
                     return 0;
                 }
             }
