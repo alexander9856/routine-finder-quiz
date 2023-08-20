@@ -12,11 +12,12 @@ import { LeftArrow, RightArrow } from './SliderArrows';
 
 export const ProductSlider = ({ products }) => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const isAlone = products.length === 1;
     return (
         <Box
             maxW={['60%', '82%', '65%', '50%']}
             position='relative'
-            mb={products.length <= 2 && '3.5rem'}
+            mb={products.length <= 2 && '2.6rem'}
         >
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -47,7 +48,7 @@ export const ProductSlider = ({ products }) => {
             >
                 {products.map((x, index) => (
                     <SwiperSlide key={index} >
-                        <CardItem item={x} />
+                        <CardItem item={x} isAlone={isAlone} />
                     </SwiperSlide>
                 ))}
 

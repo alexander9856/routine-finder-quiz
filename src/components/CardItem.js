@@ -3,7 +3,7 @@ import { QuizContext } from '../contexts/QuizProvider'
 import { Flex, Image, Text, Box, Tooltip, useToast } from "@chakra-ui/react"
 import filled from '../assets/filled.svg';
 import favorite from '../assets/favorite.svg';
-export const CardItem = ({ item }) => {
+export const CardItem = ({ item, isAlone }) => {
     const { userWishlist, setUserWishlist } = useContext(QuizContext);
     const { variants, images, title } = item;
 
@@ -29,8 +29,9 @@ export const CardItem = ({ item }) => {
     return (
         <Flex
             direction='column'
-            maxW='21.785rem'
-            maxH='27.26rem'
+            maxW={isAlone ? '21.785rem' : '100%'}
+            pb={isAlone ? '1.4rem' : 0}
+            maxH='100%'
             backgroundColor='#fff'
             pos='relative'
             borderRadius='0.5rem'
@@ -63,15 +64,15 @@ export const CardItem = ({ item }) => {
             </Tooltip>
             <Flex direction='column' mt='0.75rem' w='100%'>
                 <Tooltip
-                    hasArrow
                     arrowSize='5'
-                    label="Add to wishlist"
+                    label={title}
                     bg='blackAlpha.700'
                     placement={'top'}
                     color={'#fff'}
                     fontFamily='proxima-nova, sans-serif'
                     letterSpacing='1px'
                     fontSize={'0.8em'}
+                    textAlign='center'
                 >
                     <Text
                         whiteSpace='nowrap'

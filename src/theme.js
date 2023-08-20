@@ -129,7 +129,7 @@ const Text = defineStyleConfig({
             fontSize: ['1.125rem', '0.95rem', '0.95rem', '1rem', '1.125rem'],
             fontWeight: '500',
             lineHeight: '1.2375rem',
-            mt: '0.7rem',
+            mt: '0.5rem',
             // pos: 'absolute',
             // bottom: '-25px',
             width: '100%',
