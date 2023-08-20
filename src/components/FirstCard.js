@@ -8,7 +8,7 @@ export const FirstCard = () => {
             backgroundColor='#EEF7FB'
             borderRadius='0.5rem'
             maxW={['19rem','21.785rem']}
-            maxH='30rem'
+            maxH='26.25rem'
             mb='2.8rem'
         >
             <Text variant='cardTitle'>Daily routine</Text>

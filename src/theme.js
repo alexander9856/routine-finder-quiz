@@ -59,21 +59,23 @@ const Text = defineStyleConfig({
     variants: {
         title: {
             color: '#fff',
-            fontFamily: 'Grange, sans-serif',
-            lineHeight: '2.75rem',
-            fontSize: ['2rem', '2rem', '2rem', '2.2rem'],
-            fontWeight: '600',
+            fontFamily: 'Spectral, sans-serif',
+            lineHeight: '3.75rem',
+            fontSize: ['3rem', '3rem', '3rem', '3.2rem'],
+            fontWeight: '500',
             fontStyle: 'normal',
             textAlign: 'center'
         },
         subTitle: {
             color: '#fff',
             textAlign: 'center',
-            fontFamily: 'proxima-nova, sans-serif',
+            fontFamily: 'Proxima-Nova, sans-serif',
             fontStyle: 'normal',
             fontWeight: '400',
             lineHeight: 'normal',
-            mt: '16px'
+            mt: '16px',
+            letterSpacing:'1px',
+            fontSize: '1.1rem'
         },
         questionTitle: {
             color: '#1C2635',
@@ -107,7 +109,9 @@ const Text = defineStyleConfig({
             fontSize: '1rem',
             fontWeight: '600',
             lineHeight: '1.65rem',
-            textAlign: 'center'
+            textAlign: 'center',
+           
+
         },
         cardSubtitle: {
             color: '#1C2635',
@@ -120,16 +124,20 @@ const Text = defineStyleConfig({
             color: '#1C2635',
             textAlign: 'center',
             fontFamily: 'Grange, sans-serif',
-            fontSize: '1.125rem',
+            fontSize: ['1.125rem', '0.9rem', '0.9rem', '0.9rem', '1.125rem'],
             fontWeight: '500',
             lineHeight: '1.2375rem',
             mt: '0.7rem',
+            pos: 'absolute',
+            bottom: '-25px',
+            width: '100%',
+            textAlign: 'center',
         },
-        noProducts:{
-            textAlign:'center',
-            mt:'2rem',
-            fontWeight:'700',
-            fontSize:'1.5rem'
+        noProducts: {
+            textAlign: 'center',
+            mt: '2rem',
+            fontWeight: '700',
+            fontSize: '1.5rem'
         }
     }
 })

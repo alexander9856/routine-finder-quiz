@@ -29,8 +29,8 @@ export const CardItem = ({ item }) => {
     return (
         <Flex
             direction='column'
-            maxW='26.785rem'
-            maxH='26.25rem'
+            maxW='21.785rem'
+            maxH='26.26rem'
             backgroundColor='#fff'
             pos='relative'
             borderRadius='0.5rem'
@@ -43,7 +43,6 @@ export const CardItem = ({ item }) => {
                 src={imgUrl}
                 _hover={{ transform: 'scale(1.01)' }}
                 transition='0.1s'
-                // loading='lazy'
                 cursor='pointer'
             />
             <Tooltip
@@ -62,19 +61,15 @@ export const CardItem = ({ item }) => {
                 </Box>
             </Tooltip>
             <Flex direction='column' mt='0.75rem' w='100%'>
-                <Text variant='cardTitle' whiteSpace={'nowrap'} overflow='hidden'>
-                    {title.length > 32 ? `${title.slice(0, 32).trim()}...` : title}
-                </Text>
                 <Text
-                    width='100%'
-                    variant='price'
-                    textAlign='center'
-                    pos='absolute'
-                    bottom='-25px'
-
-                >${price}</Text>
+                    whiteSpace='nowrap'
+                    overflow='hidden'
+                    variant='cardTitle'
+                    fontSize={['1rem', '0.8rem', '0.7rem', '0.8rem', '1rem']}
+                > {title}</Text>
+                <Text variant='price'>${price}</Text>
             </Flex>
 
-        </Flex>
+        </Flex >
     )
 }

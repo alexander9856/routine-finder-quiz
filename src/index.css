@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Spectral:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
 .swiper-pagination {
@@ -38,9 +39,9 @@
     max-width: 300px !important;
   }
 
-  .swiper-slide p {
+  /* .swiper-slide p {
     font-size: 16px !important;
-  }
+  } */
 
   .swiper-container .swiper-pagination {
     bottom: -30px !important;
