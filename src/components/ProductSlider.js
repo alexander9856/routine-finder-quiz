@@ -44,7 +44,7 @@ export const ProductSlider = ({ products }) => {
                         slidesPerView: products.length == 1 ? 1 : 2,
                         spaceBetween: products.length == 1 ? 0 : 20,
                     },
-                    1650:{
+                    1800:{
                         slidesPerView: products.length == 1 ? 1 : 2,
                         spaceBetween: 0,
                     }
