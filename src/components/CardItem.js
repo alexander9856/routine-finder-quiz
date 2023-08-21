@@ -29,7 +29,7 @@ export const CardItem = ({ item, isAlone }) => {
     return (
         <Flex
             direction='column'
-            maxW={isAlone ? '21.785rem' : '100%'}
+            maxW={isAlone ? '21.785rem' : ['100%','100%','100%','100%','100%','80%']}
             pb={isAlone ? '1.4rem' : 0}
             maxH='100%'
             backgroundColor='#fff'
