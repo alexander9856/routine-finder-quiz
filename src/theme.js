@@ -159,7 +159,7 @@ const theme = extendTheme({
         lg: "62em", // 992px
         xl: "80em", // 1280px
         "2xl": "96em", // 1536px
-        "3xl": "112.5em"
+        "3xl": "112.5em" //1800px
     },
     ThemeConfig: {
         initialColorMode: "light",
