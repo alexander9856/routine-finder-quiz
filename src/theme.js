@@ -133,7 +133,6 @@ const Text = defineStyleConfig({
             // pos: 'absolute',
             // bottom: '-25px',
             width: '100%',
-            textAlign: 'center',
         },
         noProducts: {
             textAlign: 'center',

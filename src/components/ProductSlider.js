@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -41,11 +41,11 @@ export const ProductSlider = ({ products }) => {
                         spaceBetween: 10,
                     },
                     480: {
-                        slidesPerView: products.length == 1 ? 1 : 2,
-                        spaceBetween: products.length == 1 ? 0 : 20,
+                        slidesPerView: products.length === 1 ? 1 : 2,
+                        spaceBetween: products.length === 1 ? 0 : 20,
                     },
-                    1800:{
-                        slidesPerView: products.length == 1 ? 1 : 2,
+                    1800: {
+                        slidesPerView: products.length === 1 ? 1 : 2,
                         spaceBetween: 0,
                     }
                 }}
