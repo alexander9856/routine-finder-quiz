@@ -6,8 +6,6 @@ import { Stack, Text } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { QuizContext } from '../contexts/QuizProvider'
 import { FirstCard } from '../components/FirstCard'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { ProductSlider } from '../components/ProductSlider'
 import { useLoaderData, json } from 'react-router-dom'
 import { filterProducts } from '../filterProducts'
